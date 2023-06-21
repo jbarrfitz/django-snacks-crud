@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <div class="m-8">
+        <ul class="space-y-4 text-gray-500 list-disc list-inside dark:text-gray-400">
+            {% for snack in snacks %}
+                <li>
+                    <a href="{% url 'snack_detail' snack.pk %}">{{ snack.name }}</a>
+                </li>
+            {% endfor %}
+        </ul>
+    </div>
+{% endblock content %}
